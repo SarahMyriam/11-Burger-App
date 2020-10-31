@@ -8,7 +8,7 @@ function creatQmarks(sum){
     }
     return arr.toString();
 }
-
+//===CONVERTING OBJECT PAIRS TO SQL SYNTAX=======================
 function translateSQL(obj){
     var arr = [];
     for(var key in ob){
@@ -65,3 +65,6 @@ var orm = {
         });
     }
 };
+
+//===EXPORTING THE ORM OBJECT FOR THE MODEL BURGER JS FILE===========
+module.exports = orm;

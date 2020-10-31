@@ -1,4 +1,4 @@
-// IMPORT THE ORM TO CREATE FUNCTIONS THAT WILL INTERACT WITH THE DATABASE. 
+//===IMPORT THE ORM TO CREATE FUNCTIONS THAT WILL INTERACT WITH THE DATABASE========= 
 var orm = require('../config/orm.js');
 
 var burger = {
@@ -11,10 +11,15 @@ var burger = {
         orm.create('burger', cols, vals, function(res){
             cb(res);
         });
+    },
+    delete: function(condition, cb){
+        orm.delete('cats', condition, function(res){
+            cb(res)
+        });
     }  
 };
 
-//exporting the database functions for the controller
+//===EXPORTING THE DATABASE FUNCTIONS FOR THE CONTROLER=============
 module.exports = burger;
 
 
