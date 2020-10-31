@@ -1,4 +1,5 @@
-var connection = require('./connection');
+//===IMPORTING MYSQL CONNECTION==================================
+var connection = require('..config/connection.js');
 
 function creatQmarks(sum){
     var arr = [];
