@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json()); 
 
 //===IMPORTING ROUTES AND GIVING THE SERVER ACCESS TO THEM=====
-var routes = require('./controllers/burger-controller.js');
+var routes = require('./controllers/burgerController.js');
 app.use(routes);
 
 //===RUNNING THE SERVER SO IT CAN BEGIN LISTENING TO CLIENTS REQUESTS=======

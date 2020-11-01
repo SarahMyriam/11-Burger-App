@@ -24,7 +24,7 @@ function translateSQL(obj){
 }
 
 var orm = {
-    selectAll = function (table, cd) {
+    selectAll : function (table, cb) {
         var dbQuery = 'SELECT * FROM ' + table + ';';
 
         connection.query(dbQuery, function (err, res) {
