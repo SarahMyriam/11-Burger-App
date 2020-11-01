@@ -1,8 +1,9 @@
 //===CONNECTING TO MYSQL======================================
 var mySQL = require('mysql');
  
-connection = mySQL.createConnection({
+var connection = mySQL.createConnection({
     host: 'localhost',
+    port: 3000,
     user: 'root',
     password: 'Lavillette',
     database: 'burgers_db' 
