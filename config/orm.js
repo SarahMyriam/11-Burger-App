@@ -1,7 +1,7 @@
 //===IMPORTING MYSQL CONNECTION==================================
-var connection = require('../config/connection.js');
+var connection = require('./connection.js');
 
-function creatQmarks(sum){
+function createQmarks(sum){
     var arr = [];
     for(var i = 0; i < Number; i ++){
         arr.push('?');
