@@ -1,10 +1,9 @@
+//===DEPENDENCIES===================================================
 var express = require('express');
 var bodyParser = require('body-parser');
+var exphbs = require('express-handlebars') 
 
-//===SET HANDLEBARS=================================
-var handlebars = require('express-handlebars') 
-
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 var app = express();
 
@@ -14,6 +13,9 @@ app.use(express.static('public'));
 //===PARSE APPLICATION BODY AS JSON====================
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json()); 
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 //===IMPORTING ROUTES AND GIVING THE SERVER ACCESS TO THEM=====
 var routes = require('./controllers/burgerController.js');

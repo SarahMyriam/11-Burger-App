@@ -3,7 +3,6 @@ var mySQL = require('mysql');
  
 var connection = mySQL.createConnection({
     host: 'localhost',
-    port: 3000,
     user: 'root',
     password: 'Lavillette',
     database: 'burgers_db' 
@@ -11,10 +10,7 @@ var connection = mySQL.createConnection({
 
 //===MAKING THE CONNECTION======================================
 connection.connect(function(err){
-    if(err){
-        console.error('error connecting: '+ err.stack);
-        return;
-    };
+    if(err) throw err;
     console.log('connected as id ' + connection.threadId);
 });
 
