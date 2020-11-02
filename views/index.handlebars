@@ -15,6 +15,8 @@
 				</div>
 {{!--===DEVOUR IT BUTTON======old class - burger_id===I added id, it didn't exist===================  --}}
 				<div class="col-md-3 text-center">
+					{{#each burgers}}
+                    {{#unless devoured}}
 					<form class="eatburger button-size">
 						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
 						{{!-- <button type="button" id='eatbutton' class="eatburger btn-default">Devour it!</button> --}}
@@ -23,7 +25,7 @@
 					</form>
 				</div>
 				{{/unless}}
-			  {{/each}}
+			  	{{/each}}
 			</div>
 		</div>
 		<div class="col-md-6 text-center" class="task">
