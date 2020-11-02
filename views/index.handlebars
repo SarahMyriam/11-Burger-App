@@ -7,7 +7,7 @@
 		<div class="col-md-6 text-center" class="task">
 			<div class="row">
 			  {{#each burgers}}
-			  	{{#unless this.devoured}}
+			  	{{#unless devoured}}
 				<div class="col-md-9 text-center">
 					<pre>{{this.id}}. {{this.burger_name}}
 					</pre>
@@ -17,7 +17,9 @@
 				<div class="col-md-3 text-center">
 					<form class="eatburger button-size">
 						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
-						<button type="button" id='eatbutton' class="eatburger btn-default">Devour it!</button>
+						{{!-- <button type="button" id='eatbutton' class="eatburger btn-default">Devour it!</button> --}}
+						<button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}">Devour it!<span class="fa fa-usd"></span></button>
 					</form>
 				</div>
 				{{/unless}}
