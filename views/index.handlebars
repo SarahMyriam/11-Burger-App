@@ -17,7 +17,7 @@
 				<div class="col-md-3 text-center">
 					<form class="eatburger button-size">
 						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
-						<button type="submit" id='eatbutton' class="eatburger btn-default">Devour it!</button>
+						<button type="button" id='eatbutton' class="eatburger btn-default">Devour it!</button>
 					</form>
 				</div>
 				{{/unless}}
@@ -37,12 +37,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 text-center enter_section">
-			<form action="/burgers/create" method="POST">
-				<input type="text" class="create-form" name="burger_name" value="" id="enter_text">
+			<form class="creaet-form">
+				<input type="text" name="burger" value="" id="newburger">
 {{!--===BUTTON TO SUBMIT THE CHOSEN BURGER===old id - text-enter-button========================  --}}
 				<button type="submit" class="btn btn-primary" id="addburger">Submit</button>
 			</form>
-			<p>Enter a burger you want to eat Click the "Submit" button.</p>
+			<label for="newburger">Enter a burger you want to eat Click the "Submit" button.</label>
 		</div>
 	</div>
 </div>
