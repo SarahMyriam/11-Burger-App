@@ -7,7 +7,7 @@ $(function(){
             devoured: 0
         };
 
-        $ajax('/api/burgers', {
+        $.ajax('/api/burgers', {
             type: 'POST',
             data: newBurger
         }).then(function(){
