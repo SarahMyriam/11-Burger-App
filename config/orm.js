@@ -1,7 +1,7 @@
 //===IMPORTING MYSQL CONNECTION==================================
-var connection = require('./connection.js');
+var connection = require('../connection.js');
 
-function createQmarks(sum){
+function createQmarks(Number){
     var arr = [];
     for(var i = 0; i < Number; i ++){
         arr.push('?');
@@ -11,9 +11,9 @@ function createQmarks(sum){
 //===CONVERTING OBJECT PAIRS TO SQL SYNTAX=======================
 function translateSQL(obj){
     var arr = [];
-    for(var key in ob){
-        var value = ob[key];
-        if(Object.hasOwnProperty.call(ob, key)) {
+    for(var key in obj){
+        var value = obj[key];
+        if(Object.hasOwnProperty.call(obj, key)) {
             if(typeof value === 'string' && value.indexOf(' ') >= 0){
                 value = " ' " + value + " ' ";
             }
