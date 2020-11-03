@@ -1,5 +1,5 @@
 //===IMPORTING MYSQL CONNECTION==================================
-var connection = require('../connection.js');
+var connection = require('./connection.js');
 
 function createQmarks(Number){
     var arr = [];
@@ -45,7 +45,7 @@ var orm = {
         });
     },
     updateOne: function(table, objColVals, condition, cb){
-        var dbQuery = 'UPDATE ' + table + 'SET '+ translateSQL(objColVals) + 'WHERE ' + condition;
+        var dbQuery = 'UPDATE ' + table + ' SET ' + translateSQL(objColVals) + ' WHERE ' + condition;
         console.log(dbQuery);
         connection.query(dbQuery, function(err, res){
             if(err){
