@@ -1,11 +1,9 @@
 $(function(){
+    //===INPUT FORM=============================================
     $('.create-form').on('submit', function(event){
         event.preventDefault();
-//===INPUT FORM======================================
         var newBurger = {
-            burger_name: $('#newburger')
-            .val()
-            .trim(),
+            burger_name: $('#newburger').val().trim(),
             devoured: 0
         };
 
@@ -17,7 +15,8 @@ $(function(){
             location.reload();
         });
     });
-//===CHOOSING THE BURGER BUTTON========================
+
+//===CHOOSING THE BURGER BUTTON============================
     $('.eatburger').on('click', function(event){
         event.preventDefault();
 
@@ -34,7 +33,8 @@ $(function(){
             location.reload()
         });
     });
-    
+
+//===DELETING THE BURGER BUTTON==============================
     $('.trashburger').on('click', function(event){
         event.preventDefault();
     
@@ -46,4 +46,3 @@ $(function(){
             .then(location.reload());
         });
 });
-
